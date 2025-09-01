@@ -3,8 +3,8 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { FaSearch, FaTimes, FaHeart, FaShoppingCart } from "react-icons/fa";
-import { add } from "../Redux/Cartslice";
-import { useDarkMode } from "../components/DarkModeContext";
+import { add } from "../../Redux/Cartslice";
+import { useDarkMode } from "../../components/DarkModeContext";
 
 function normalizeProduct(raw) {
   const product = {
@@ -257,7 +257,7 @@ export default function Product() {
           {/* Category Filters - Buttons on Desktop, Dropdown on Mobile */}
           <div className="flex flex-col items-center">
             {/* Mobile Dropdown */}
-            <div className="block lg:hidden w-full max-w-md">
+            <div className="block md:hidden w-full max-w-sm">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}

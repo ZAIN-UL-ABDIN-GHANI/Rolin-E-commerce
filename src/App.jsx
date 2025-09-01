@@ -4,10 +4,11 @@ import { DarkModeProvider } from "./components/DarkModeContext";
 import Header from "./components/Header";
 
 import Footer from "./components/Footer";
-import Home from "./Sections/Home";
+import Home from "./pages/Home/Home";
 
-import ExclusiveOffer from "./pages/Exclusiveoffer";
-import Product from "./pages/product";
+import ExclusiveOffer from "./pages/product/Exclusiveoffer";
+import Product from "./pages/product/Product";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
   <Home/>
   <Product/>
  <ExclusiveOffer/>
+ <Contact/>
       <Footer />
     </DarkModeProvider>
   );

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useDarkMode } from '../components/DarkModeContext';
-
+import { useDarkMode } from '../../components/DarkModeContext';
+import offer from "../../assets/images/offer.png"
 function ExclusiveOffer() {
   const { darkMode } = useDarkMode();
 
@@ -58,10 +58,11 @@ function ExclusiveOffer() {
 
   return (
     <section 
+    id='features'
       className={`p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 flex flex-col lg:flex-row justify-between items-center min-h-[400px] ${
         darkMode 
           ? 'bg-gray-900 text-white' 
-          : 'bg-green-50 text-gray-900'
+          : 'bg-white text-gray-900'
       }`}
     >
       {/* Text Content - Order 1 on desktop, Order 2 on mobile */}
@@ -86,7 +87,7 @@ function ExclusiveOffer() {
             darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200 shadow-sm'
           }`}>
             <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold ${
-              darkMode ? 'text-green-400' : 'text-green-600'
+              darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}>
               {String(timeLeft.hours).padStart(2, '0')}
             </p>
@@ -102,7 +103,7 @@ function ExclusiveOffer() {
             darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200 shadow-sm'
           }`}>
             <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold ${
-              darkMode ? 'text-green-400' : 'text-green-600'
+              darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}>
               {String(timeLeft.minutes).padStart(2, '0')}
             </p>
@@ -118,7 +119,7 @@ function ExclusiveOffer() {
             darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200 shadow-sm'
           }`}>
             <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold ${
-              darkMode ? 'text-green-400' : 'text-green-600'
+              darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}>
               {String(timeLeft.seconds).padStart(2, '0')}
             </p>
@@ -135,8 +136,8 @@ function ExclusiveOffer() {
           onClick={handleBuyNow}
           className={`mt-4 sm:mt-6 lg:mt-8 px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-md text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-offset-2 focus:outline-none ${
             darkMode 
-              ? 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500' 
-              : 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500'
+              ? 'bg-gray-600 hover:bg-white text-black focus:ring-gray-500' 
+              : 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500'
           }`}
           aria-label="Buy now to get exclusive offer"
         >
@@ -147,27 +148,31 @@ function ExclusiveOffer() {
       {/* Image Section - Order 2 on desktop, Order 1 on mobile */}
       <div className="flex-1 flex justify-center lg:justify-end items-center order-1 lg:order-2 mb-4 lg:mb-0">
         <div className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px]">
-          {/* Placeholder for product image - replace with your actual image */}
-          <div className={`w-full aspect-square rounded-lg shadow-lg overflow-hidden ${
-            darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'
-          }`}>
-            <div className={`w-full h-full flex items-center justify-center ${
-              darkMode ? 'bg-gray-700 text-gray-400' : 'bg-gray-100 text-gray-500'
+          {/*  */}
+          <div className={`w-full aspect-square rounded-lg shadow-lg overflow-hidden `}>
+            <div className={`w-full h-full flex items-center justify-center
             }`}>
-              {/* Replace this div with your actual image */}
-              <div className="text-center p-4">
-                <div className="text-4xl sm:text-5xl md:text-6xl mb-2">📦</div>
-                <p className="text-sm sm:text-base">Product Image</p>
+              {/* actual image */}
+              <div className="text-center md:h-96 md:w-72 object-cover  ">
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-2">
+                  <img
+            src={offer}
+            alt="offer image"
+            className={`max-w-full max-h-full object-contain transition-opacity duration-300`}
+            
+             />
+                </div>
+         
               </div>
             </div>
           </div>
           
           {/* Decorative elements */}
           <div className={`absolute -top-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 rounded-full ${
-            darkMode ? 'bg-green-500' : 'bg-green-400'
+            darkMode ? 'bg-gray-700' : 'bg-gray-900'
           } opacity-80`}></div>
           <div className={`absolute -bottom-2 -left-2 w-6 h-6 sm:w-8 sm:h-8 rounded-full ${
-            darkMode ? 'bg-green-600' : 'bg-green-500'
+            darkMode ? 'bg-gray-700' : 'bg-gray-900'
           } opacity-60`}></div>
         </div>
       </div>

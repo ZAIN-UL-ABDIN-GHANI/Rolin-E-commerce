@@ -215,16 +215,16 @@ export default function Header() {
             </div>
 
             {/* Right-side icons */}
-            <div className="flex items-center space-x-4 relative">
+            <div className="flex items-center  top-1 space-x-5 relative">
               {/* Dark Mode Toggle - centered vertically */}
-              <div className="fixed top-2 right-32 z-20">
+              <div className="hidden md:fixed  right-40 z-10">
                 <button
                   onClick={toggleDarkMode}
-                  className={`relative w-14 h-8 rounded-full transition-colors duration-300 focus:outline-none ${darkMode ? "bg-gray-800" : "bg-gray-300"}`}
+                  className={`relative w-14 h-8 rounded-full transition-colors duration-300 focus:outline-none ${darkMode ? "bg-gray-100" : "bg-gray-400"}`}
                   aria-label="Toggle Dark Mode"
                 >
                   <span
-                    className={`absolute left-0.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full shadow-md transform transition-transform duration-300 ${darkMode ? "translate-x-6 bg-gray-900" : "translate-x-0 bg-white"}`}
+                    className={`absolute left-0.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full shadow-md transform transition-transform duration-300 ${darkMode ? "translate-x-6 bg-gray-400" : "translate-x-0 bg-gray-100"}`}
                   />
                 </button>
               </div>
@@ -248,7 +248,7 @@ export default function Header() {
               {/* User / Login */}
               <div className="hidden md:flex items-center">
                 <a href="/login" className="flex items-center">
-                  <FaUserCircle className="text-2xl text-[#F9AD3A] dark:text-[#034FC3]" />
+                  <FaUserCircle className="text-2xl text-gray-600 dark:text-white" />
                 </a>
               </div>
 
