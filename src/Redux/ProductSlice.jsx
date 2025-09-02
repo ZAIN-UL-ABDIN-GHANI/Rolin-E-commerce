@@ -42,7 +42,7 @@ export function fetchProducts() {
     }
   };
 }
-
+ 
 // ------------------- TIMER SLICE -------------------
 export const timerSlice = createSlice({
   name: "timer",

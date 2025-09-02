@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 
 function Home() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between min-h-fit px-8 md:px-16 bg-[#FAEBD7]">
+    <div className="flex flex-col md:flex-row items-center justify-between min-h-fit px-8 md:px-16 bg-white">
       
       
       <div className="flex-1 text-center md:text-left space-y-6 ">
