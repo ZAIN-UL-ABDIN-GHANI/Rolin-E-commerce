@@ -29,5 +29,5 @@ const userSlice = createSlice({
 })
 
 export const {storeUser, storeEmail, storeVerifyCode, clearVerifyCode, storeToken} = userSlice.actions;
-export default userSlice.reducers;
+export default userSlice.reducer;
 

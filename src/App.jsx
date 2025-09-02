@@ -6,10 +6,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-
-import ExclusiveOffer from "./pages/Exclusiveoffer";
-import Product from "./pages/product";
-
+import Testimonials from "./components/Testimonials";
 function App() {
   
 
@@ -17,10 +14,7 @@ function App() {
     <DarkModeProvider>
       <Header />
   <Home/>
-  <Product/>
- <ExclusiveOffer/>
- <Signup />
- <Login />
+  <Testimonials />
       <Footer />
     </DarkModeProvider>
   );

@@ -1,9 +1,10 @@
 import React from 'react';
 import hero from "../assets/images/hero.png";
-import {Link} from "react-router-dom"
+
 
 function Home() {
   return (
+    <>
     <div className="flex flex-col md:flex-row items-center justify-between min-h-fit px-8 md:px-16 bg-white">
       
       
@@ -27,6 +28,7 @@ function Home() {
         />
       </div>
     </div>
+    </>
   );
 }
 
